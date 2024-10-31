@@ -48,5 +48,7 @@ describe(`PokeListe spec`, () => {
 
   it(`Devrait afficher un message d'erreur si l'api échoue`, () => {
     cy.intercept('GET', 'https://pokeapi.co/api/v2/pokemon', { statusCode: 500 }).as('getPokemonError');
+    cy.wait('@getPokemonError');
+    cy.get('#error-message').should('be.visible');// vérif si element d'affichage existant
   })
 });

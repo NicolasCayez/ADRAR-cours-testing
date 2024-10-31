@@ -44,4 +44,5 @@ describe(`addUser spec`, () => {
     cy.get("form").children('input').eq(4).click();
     cy.get("#msgzone").should('have.text', 'Veuillez remplir tous les champs du formulaire');
   });
+
 });
