@@ -1,4 +1,4 @@
-describe(`Counter spec`, () => {
+describe(`Add Number spec`, () => {
 
   it(`Chargement Adding Numbers`, () => {
     cy.visit(`localhost:5173/addition.html`)
